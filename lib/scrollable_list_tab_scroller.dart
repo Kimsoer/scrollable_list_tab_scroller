@@ -204,9 +204,10 @@ class ScrollableListTabScrollerState extends State<ScrollableListTabScroller> {
 
   Widget buildCustomHeaderContainerOrDefault({required BuildContext context, required Widget child}) {
     return widget.headerContainerBuilder?.call(context, child) ??
-        SizedBox(
+        Container(
           height: 100,
           child: child,
+          alignment: Alignment.centerLeft,
         );
   }
 
